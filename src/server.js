@@ -19,10 +19,10 @@ const server = http.createServer((req, res) => {
       email: 'johndoe@example.com'
     });
 
-    return res.end('User successfully created!');
+    return res.writeHead(201).end();
   }
 
-  res.end('Server on fire!');
+  res.writeHead(404).end();
 });
 
 server.listen(3333);
